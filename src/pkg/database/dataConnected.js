@@ -1,5 +1,5 @@
 const sequelize = require('./sequelize');
-
+const user = require('../../models/associations')
 const database = 
 {
     connection: async()=>{
@@ -11,6 +11,17 @@ const database =
         catch (err)
         {
             console.error('Error authent', err)
+        }
+    },
+    creaedatabase: async() => {
+        try
+        {
+            await sequelize.sync( {force: true})
+            console.log("All models were synchronized successfully.");
+        }
+        catch (err)
+        {
+            console.error('Error syncing', err)
         }
     }
 }
