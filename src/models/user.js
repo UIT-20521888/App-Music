@@ -11,7 +11,7 @@ user.init({
         allowNull: false,
         unique: true,
     },
-    Password:
+    PassWord:
     {
         type: DataTypes.TEXT,
         allowNull: false,
